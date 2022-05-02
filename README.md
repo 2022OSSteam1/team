@@ -13,8 +13,28 @@
 7. 물품 이름으로 검색 - 물건을 이름으로 검색하는 함수이다.  
 8. 가격으로 검색 - 물건을 가격의 범위를 지정해서 검색한다.  
 9. 유통기한 검색 - 남은 유통기한을 알려주는 함수이다.  
-10. 물품 재고 검색 - 검색한 물품의 재고를 알려주는 함수이다.
- 
+10. 물품 재고 검색 - 검색한 물품의 재고를 알려주는 함수이다.  
+함수 정의:  
+typedef struct{
+char name[20];
+int ex_date; //유통기한
+int ma_date; //제조일자(manufacturing date)
+int price; //가격
+int stock_num; //물품 재고 개수
+}Product;
+
+int createProduct(Product *p); //물품 추가
+void readProduct(Product *p); //물품 조회
+int updateProduct(Product *p); //물품 정보 수정
+int deleteProduct(Product *p); //물품 삭제
+void saveData(Product *p, int count); //데이터를 파일에 저장
+int loadData(Product *p); //파일에서 데이터를 불러오기
+int selectMenu(); //번호
+int searchName(Product *p);//물품 이름으로 검색
+int searchPrice(Produtct *p)//가격으로 검색
+int searchEx(Product *p)//유통기한으로 검색
+int searchRemain(product *p)//물품 재고 검색
+
 개발환경: linux, github  
 언어: C언어  
 팀소개: 유재혁 , 오성진  
