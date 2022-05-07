@@ -1,0 +1,8 @@
+int deleteProduct(Product *p){
+    p->ex_date=-1;
+    p->ma_date=-1;
+    p->price=-1;
+    p->stock_num=-1;
+    printf("==> 삭제됨!\n");
+    return 0;
+}
