@@ -53,6 +53,7 @@ int updateProduct(Product *p){
 	getchar();
     	printf("\n물품명 : ");
     	fgets(p->name, 100, stdin);
+	p->name[strlen(p->name)-1]='\0';
 
     	printf("물품 유통기한(ex220502) : ");
     	scanf("%d",&p->ex_date);
