@@ -41,12 +41,12 @@ int main(void){
                                 continue;
                         }
                         else{
-                                deleteProduct(&s[number-1]);
+                        	deleteProduct(&s[number-1]);
                                 count-=1;
                         }
         	}
+	}
         printf("종료됨!\n");
         return 0;
-	}
 }
                                                                          
