@@ -1,3 +1,5 @@
+이렇게 코드 작성해서 올려주시는 것도 좋지만 직접 수정하셔서 pr 보내시는게 더 좋아요!! ㅎㅎ
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
