@@ -35,9 +35,9 @@ int main(void){
                         printf("\n삭제할 번호?(취소:0) : ");
                         scanf("%d", &number);
 
-                        if(number==0) {
-                                printf("=>취소됨");
-                                continue;
+                        if(number==0){
+                        	printf("=>취소됨");
+                        	continue;
                         }
                         else{
                         	deleteProduct(&s[number-1]);
