@@ -18,12 +18,11 @@ int main(void){
                 }
                 else if(menu==3){
                         int number;
-
                         listProduct(s,index);
                         printf("\n수정할 번호?(취소:0) : ");
                         scanf("%d", &number);
-
-                        if(number==0){
+                        
+			if(number==0){
                         printf("=>취소됨");
                         continue;
                         }
