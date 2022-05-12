@@ -30,7 +30,6 @@ int main(void){
                 }
                 else if(menu==4){
                         int number=0;
-
                         listProduct(s,index);
                         printf("\n삭제할 번호?(취소:0) : ");
                         scanf("%d", &number);
