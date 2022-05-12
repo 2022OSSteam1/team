@@ -1,5 +1,6 @@
 #include "product.h"
 
+
 int main(void){
         Product s[100];
         int count=0,index=0,menu,num=0;
