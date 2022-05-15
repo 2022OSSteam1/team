@@ -7,17 +7,25 @@ int selectMenu(){
         printf("2. 추가\n");
         printf("3. 수정\n");
         printf("4. 삭제\n");
-        printf("0. 종료\n");
+        printf("5. 저장\n");
+        printf("6. 이름으로 검색\n");
+        printf("7. 가격으로 검색\n");
+        
+        
+
+
+	printf("0. 종료\n");
         printf("입력하시오 : ");
         scanf("%d", &menu);
         return menu;
 }
 
 int listProduct(Product *s, int index){
-        printf("\n***************************");
+        printf("\n***************************\n");
+	printf("상품번호 상품명 유통기한 제조일자 가격 재고수\n");
         for(int i=0; i<index; i++){
                 if(s[i].price == -1) continue;
-                printf("\n%2d 번 유통기한 제조일자 가격  재고수\n", i+1);
+                printf("\n%2d 번 ", i+1);
                 readProduct(s[i]);
         }
         printf("***************************\n");
