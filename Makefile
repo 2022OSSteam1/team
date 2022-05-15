@@ -1,6 +1,8 @@
-shop: main.c product.o
-	gcc -o shop main.c product.o
-product.o: product.c product.h
-	gcc -c product.c -o product.o
-clean:
+shop : main.c product.o manager.o
+	gcc -o shop main.c product.o manager.o
+product.o : product.c product.h
+	gcc -c product.c
+manager.o : manager.c manager.h
+	gcc -c manager.c
+clean :
 	rm *.o shop 	
