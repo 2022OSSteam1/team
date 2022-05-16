@@ -47,9 +47,23 @@ int main(void){
                                 count-=1;
                         }
         	}
-	//	else if(menu==5) saveData(s,index);
+		else if(menu==5) {
+			if(count == 0) printf("데이터가 없습니다!\n");
+			else saveData(p, index);
+		}
 		else if(menu==6) searchName(p, index);
 		else if(menu==7) searchPrice(p, index);
+		else if(menu == 8){
+            		listProduct(p, index);
+        		if (count==0) printf("데이터가 없습니다!\n");
+           		else searchEx(p, count);
+          	}
+          	else if(menu == 9){
+            		listProduct(p, index);
+            		if (count==0) printf("데이터가 없습니다!\n");
+            		else searchRemain(p, count);
+          	}
+          	else break;
 	}
         printf("종료됨!\n");
         return 0;

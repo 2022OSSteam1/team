@@ -10,10 +10,9 @@ int selectMenu(){
         printf("5. 저장\n");
         printf("6. 이름으로 검색\n");
         printf("7. 가격으로 검색\n");
+	printf("8. 유통기한으로 검색\n");
+	printf("9. 재고 개수로 검색\n");	
         
-        
-
-
 	printf("0. 종료\n");
         printf("입력하시오 : ");
         scanf("%d", &menu);
@@ -88,4 +87,3 @@ int deleteProduct(Product *p){
     	printf("==> 삭제됨!\n");
    	return 0;
 }
-

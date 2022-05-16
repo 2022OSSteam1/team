@@ -19,5 +19,4 @@ int listProduct(Product *s, int index); //물품의 항목 리스트 띄우기�
 int createProduct(Product *p); //물품 추가
 int updateProduct(Product *p); //물품 정보 수정
 int deleteProduct(Product *p); //물품 삭제
-
 int selectMenu(); //번호
