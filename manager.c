@@ -73,7 +73,6 @@ void searchPrice(Product *p, int index){	// 가격으로 검색
                         readProduct(p[i]);
                         scntt++;
                 }
-		printf("%d개 물품 검색됨!\n", scnt);
         }
         if(scntt==0) printf("\n=> 검색된 데이터 없음!");
                 printf("\n");
@@ -92,7 +91,7 @@ int searchEx(Product p[], int count){
                         readProduct(p[i]);
                         count_ex++;
                 }
-		printf("%d개 물품 검색됨!\n", count_ex);
+		printf("총 %d개 물품 검색됨\n", count_ex);
         }
         if(count_ex==0) printf("=> 유통기한이 %d인 물품은 존재하지 않습니다.\n", ex);
         return 0;
@@ -110,7 +109,7 @@ int searchRemain(Product p[], int count){
                         readProduct(p[i]);
                 count_remain++;
                 }
-		printf("%d개 물품 검색됨!\n", count_remain);
+		printf("총 %d개 물품 검색됨!\n", count_remain);
         }
         if(count_remain == 0) printf("=>재고 개수가 %d인 물품은 존재하지 않습니다.\n", remain);
         return 0;
