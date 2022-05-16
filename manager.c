@@ -52,6 +52,7 @@ void searchName(Product *p, int index){	// 이름으로 검색
                         readProduct(p[i]);
                         scnt++;
                 }
+		printf("%d개 물품 검색죔!\n", scnt);
         }
         if(scnt==0) printf("\n=> 검색된 데이터 없음!");
         printf("\n");
@@ -73,7 +74,7 @@ void searchPrice(Product *p, int index){	// 가격으로 검색
                         readProduct(p[i]);
                         scntt++;
                 }
-		printf("%d개 물품 검색됨!\n", scnt);
+		printf("%d개 물품 검색됨!\n", scntt);
         }
         if(scntt==0) printf("\n=> 검색된 데이터 없음!");
                 printf("\n");
@@ -93,7 +94,8 @@ int searchMa(Product *p, int count){
                         readProduct(p[i]);
                         count_ma++;
                 }
-        }
+        	printf("%d개 물품 검색됨!\n", count_ma);
+	}
         if(count_ma==0) printf("=> 제조일자가 %d인 물품은 존재하지 않습니다.\n", ma);
         return 0;
 }
