@@ -1,5 +1,18 @@
 #include "manager.h"
 
+void saveData(Product p[], int count){
+        FILE* fp;
+
+        fp= fopen("product.txt","wt");
+        for(int i=0;i<count;i++){
+                if(p[i].price == -1) continue;
+                fprintf(fp, "%s %d %d %d %d\n", p[i].name, p[i].ex_date, p[i].ma_date, p[i].price, p[i].stock_num);
+        }
+
+        fclose(fp);
+        printf("저장됨!\n");
+}
+
 int loadData(Product *p){   // 파일에서 불러오기
         int count=0, i=0, enter;
         FILE *fp;
@@ -35,7 +48,7 @@ void searchName(Product *p, int index){	// 이름으로 검색
         for(int i=0; i<index; i++){
                 if(p[i].price == -1) continue;
                 if(strstr(p[i].name, search)){
-                        printf("\n%d 번 ", i+1);
+                        printf("\n=> %d 번 ", i+1);
                         readProduct(p[i]);
                         scnt++;
                 }
@@ -56,7 +69,7 @@ void searchPrice(Product *p, int index){	// 가격으로 검색
         for(int i=0; i<index; i++){
                 if(p[i].price == -1) continue;
                 if(p[i].price >= min && p[i].price <=max ){
-                        printf("\n%d 번 ", i+1);
+                        printf("\n=> %d 번 ", i+1);
                         readProduct(p[i]);
                         scntt++;
                 }
@@ -64,3 +77,41 @@ void searchPrice(Product *p, int index){	// 가격으로 검색
         if(scntt==0) printf("\n=> 검색된 데이터 없음!");
                 printf("\n");
 }
+
+
+int searchEx(Product p[], int count){
+        int ex;
+	int count_ex=0;
+        printf("찾으시는 유통기한을 입력하세요: ");
+        scanf("%d", &ex);
+
+        for(int i=0;i<count;i++){
+                if(p[i].ex_date == ex){
+			printf("\n=> %d 번 ", i+1);
+                        readProduct(p[i]);
+                        //printf("\n=>해당 물품: %s\n", p[i].name);
+                        count_ex++;
+                }
+        }
+        if(count_ex==0) printf("=>유통기한이 %d인 물품은 존재하지 않습니다.\n", ex);
+        return 0;
+}
+
+int searchRemain(Product p[], int count){
+        int remain;
+	int count_remain = 0;
+        printf("\n찾으시는 재고 개수를 입력하세요: ");
+        scanf("%d", &remain);
+
+        for(int i=0;i<count;i++){
+                if(p[i].stock_num == remain){
+			printf("\n=> %d 번 ", i+1);
+                        readProduct(p[i]);
+                //printf("\n=>해당 물품: %s\n", p[i].name);
+                count_remain++;
+                }
+        }
+        if(count_remain == 0) printf("=>재고 개수가 %d인 물품은 존재하지 않습니다.\n", remain);
+        return 0;
+}
+
