@@ -93,7 +93,7 @@ int searchEx(Product p[], int count){
                         count_ex++;
                 }
         }
-        if(count_ex==0) printf("=>유통기한이 %d인 물품은 존재하지 않습니다.\n", ex);
+        if(count_ex==0) printf("=> 유통기한이 %d인 물품은 존재하지 않습니다.\n", ex);
         return 0;
 }
 
