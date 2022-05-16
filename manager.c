@@ -79,6 +79,24 @@ void searchPrice(Product *p, int index){	// 가격으로 검색
 }
 
 
+
+int searchMa(Product *p, int count){
+        int ma;
+	int count_ma=0;
+        printf("찾으시는 유통기한을 입력하세요: ");
+        scanf("%d", &ma);
+
+        for(int i=0;i<count;i++){
+                if(p[i].ex_date == ma){
+			printf("\n=> %d 번 ", i+1);
+                        readProduct(p[i]);
+                        count_ma++;
+                }
+        }
+        if(count_ma==0) printf("=> 제조일자가 %d인 물품은 존재하지 않습니다.\n", ma);
+        return 0;
+}
+
 int searchEx(Product p[], int count){
         int ex;
 	int count_ex=0;
@@ -89,7 +107,6 @@ int searchEx(Product p[], int count){
                 if(p[i].ex_date == ex){
 			printf("\n=> %d 번 ", i+1);
                         readProduct(p[i]);
-                        //printf("\n=>해당 물품: %s\n", p[i].name);
                         count_ex++;
                 }
         }
@@ -107,7 +124,6 @@ int searchRemain(Product p[], int count){
                 if(p[i].stock_num == remain){
 			printf("\n=> %d 번 ", i+1);
                         readProduct(p[i]);
-                //printf("\n=>해당 물품: %s\n", p[i].name);
                 count_remain++;
                 }
         }
