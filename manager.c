@@ -87,7 +87,7 @@ int searchMa(Product *p, int count){
         scanf("%d", &ma);
 
         for(int i=0;i<count;i++){
-                if(p[i].ex_date == ma){
+                if(p[i].ma_date == ma){
 			printf("\n=> %d 번 ", i+1);
                         readProduct(p[i]);
                         count_ma++;
