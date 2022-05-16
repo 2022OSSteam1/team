@@ -14,7 +14,7 @@ int main(void){
                 if(menu == 1){
                         if(count==0) continue;
                         else {
-                                listProduct(p,index);
+                                listProduct(p,count);
                         }
                 }
                 else if(menu ==2){
@@ -58,7 +58,12 @@ int main(void){
         		if (count==0) printf("데이터가 없습니다!\n");
            		else searchEx(p, count);
           	}
-          	else if(menu == 9){
+		else if(menu ==9){
+			listProduct(p, index);
+			if (count ==0) printf("데이터가 없습니다!\n");
+			else searchMa(p, count);
+		}
+          	else if(menu == 10){
             		listProduct(p, index);
             		if (count==0) printf("데이터가 없습니다!\n");
             		else searchRemain(p, count);

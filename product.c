@@ -11,18 +11,18 @@ int selectMenu(){
         printf("6. 이름으로 검색\n");
         printf("7. 가격으로 검색\n");
 	printf("8. 유통기한으로 검색\n");
-	printf("9. 재고 개수로 검색\n");	
-        
+	printf("9. 제조일자로 검색\n");	
+        printf("10. 재고 개수로 검색\n");
 	printf("0. 종료\n");
         printf("입력하시오 : ");
         scanf("%d", &menu);
         return menu;
 }
 
-int listProduct(Product *s, int index){
+int listProduct(Product *s, int count){
         printf("\n***************************\n");
 	printf("상품번호 상품명 유통기한 제조일자 가격 재고수\n");
-        for(int i=0; i<index; i++){
+        for(int i=0; i<count; i++){
                 if(s[i].price == -1) continue;
                 printf("\n%2d 번 ", i+1);
                 readProduct(s[i]);
